@@ -2,11 +2,11 @@ package com.example.homeplus;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toolbar;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -45,7 +45,7 @@ public class homePlusMain extends AppCompatActivity {
                     selected = fragmentLivingRoom;
                 }else if(position==1){
                     selected = fragmentKitchen;
-                }else if(position==3){
+                }else if(position==2){
                     selected = fragmentRoom;
                 }
 
