@@ -7,7 +7,10 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 
+import com.google.android.material.bottomnavigation.BottomNavigationMenu;
 import com.google.android.material.tabs.TabLayout;
 
 public class homePlusMain extends AppCompatActivity {
@@ -15,6 +18,7 @@ public class homePlusMain extends AppCompatActivity {
     FragmentLivingRoom fragmentLivingRoom;
     FragmentKitchen fragmentKitchen;
     FragmentRoom fragmentRoom;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +26,9 @@ public class homePlusMain extends AppCompatActivity {
         /*toolbar=findViewById(R.id.toolbar);*/
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.show();
+        actionBar.setTitle("Home Plus");
 
         fragmentLivingRoom = new FragmentLivingRoom();
         fragmentKitchen = new FragmentKitchen();
@@ -61,7 +67,16 @@ public class homePlusMain extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
 
             }
+
+
         });
+
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.homeplusmenu,menu);
+        return true;
+    }
 }

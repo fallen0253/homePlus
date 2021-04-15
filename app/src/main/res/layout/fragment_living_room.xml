@@ -3,12 +3,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".FragmentLivingRoom">
 
-    <!-- TODO: Update blank fragment layout -->
-   <Button
-       android:text="첫번째"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="현재 LCD 정보"
+            android:layout_marginRight="50dp"
+            android:textStyle="bold"
+            />
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:switchMinWidth="56dp"
+            android:text="LED 전원"/>
+            
+    </LinearLayout>
+    
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="20dp" />
+
+    <CheckBox
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="날짜 정보"/>
+    <CheckBox
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="날씨 정보"/>
+    <CheckBox
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="미세먼지 정보"/>
+    <CheckBox
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사용자 입력 정보"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:width="200dp"
+            android:height="50dp"
+            android:background="@drawable/background_edittext"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="메세지를 입력해주세요"/>
+        <ImageView
+            android:src="@drawable/point2"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"/>
+    </LinearLayout>
+
 
 </LinearLayout>
