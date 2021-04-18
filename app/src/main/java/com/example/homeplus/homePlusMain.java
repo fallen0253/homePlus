@@ -41,6 +41,7 @@ public class homePlusMain extends AppCompatActivity {
         tabs.addTab(tabs.newTab().setText("부엌"));
         tabs.addTab(tabs.newTab().setText("방"));
 
+
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
