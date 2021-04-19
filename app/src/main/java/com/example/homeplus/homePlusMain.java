@@ -14,7 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationMenu;
 import com.google.android.material.tabs.TabLayout;
 
 public class homePlusMain extends AppCompatActivity {
-   /* Toolbar toolbar;*/
+
     FragmentLivingRoom fragmentLivingRoom;
     FragmentKitchen fragmentKitchen;
     FragmentRoom fragmentRoom;
@@ -23,7 +23,7 @@ public class homePlusMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_plus_main);
-        /*toolbar=findViewById(R.id.toolbar);*/
+
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowTitleEnabled(true);
