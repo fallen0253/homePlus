@@ -10,7 +10,9 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    /*상현 2021-04-18 회원가입 요청코드*/
     public static final int REQUEST_CODE_JOINMEBER = 101;
+    /*상현 2021-04-18 로그인 요청코드*/
     public static final int REQUEST_CODE_HOMEPLUS = 102;
     Button btnJoinMember, btnHomePlus;
     @Override
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btnJoinMember=findViewById(R.id.btnJoinMember);
         btnHomePlus=findViewById(R.id.btnHomePlus);
+        /*상현 2021-04-18 회원가입 액티비티 호출 */
         btnJoinMember.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, REQUEST_CODE_JOINMEBER);
             }
         });
+        /*상현 2021-04-18 홈플러스 메인 액티비티 호출*/
         btnHomePlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    /*상현 2021-04-18 액티비티 응답 구별 메서드*/
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

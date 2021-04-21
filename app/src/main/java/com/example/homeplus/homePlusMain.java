@@ -14,7 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationMenu;
 import com.google.android.material.tabs.TabLayout;
 
 public class homePlusMain extends AppCompatActivity {
-   /* Toolbar toolbar;*/
+    /*상현 2021-04-18 프래그먼트 거실, 부엌, 방 선언*/
     FragmentLivingRoom fragmentLivingRoom;
     FragmentKitchen fragmentKitchen;
     FragmentRoom fragmentRoom;
@@ -23,17 +23,17 @@ public class homePlusMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_plus_main);
-        /*toolbar=findViewById(R.id.toolbar);*/
 
+        /*상현 2021-04-18 액션바 선언*/
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.show();
         actionBar.setTitle("Home Plus");
-
+        /*상현 2021-04-18 프래그먼트 객체 생성 선언*/
         fragmentLivingRoom = new FragmentLivingRoom();
         fragmentKitchen = new FragmentKitchen();
         fragmentRoom = new FragmentRoom();
-
+        /*상현 2021-04-18 프래그먼트 매니저 참조*/
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentLivingRoom).commit();
 
         TabLayout tabs = findViewById(R.id.tabs);
