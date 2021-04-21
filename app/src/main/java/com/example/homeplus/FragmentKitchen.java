@@ -21,7 +21,7 @@ public class FragmentKitchen extends Fragment {
         super.onCreate(savedInstanceState);
 
     }
-
+    /*상현 2021-04-21 프래그먼트 인플레이트 */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

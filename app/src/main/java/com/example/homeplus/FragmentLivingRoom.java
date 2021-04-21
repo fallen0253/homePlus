@@ -20,7 +20,7 @@ public class FragmentLivingRoom extends Fragment {
         super.onCreate(savedInstanceState);
 
     }
-
+    /* 상현 2021-04-21 거실 */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

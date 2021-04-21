@@ -27,8 +27,10 @@ public class FragmentRoom extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        /*상현 2021-04-21 뷰 위젯 생성 후 프레그먼트를 인플레이트 한다.*/
         View fragroom = inflater.inflate(R.layout.fragment_room,container,false);
         TextView text1 = fragroom.findViewById(R.id.text1);
+        /*상현 2021-04-21 텍스트뷰 선택시 발생할 이벤트 작동 제대로 되나 실험*/
         text1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

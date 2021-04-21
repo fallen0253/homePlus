@@ -35,13 +35,13 @@ public class homePlusMain extends AppCompatActivity {
         fragmentRoom = new FragmentRoom();
         /*상현 2021-04-18 프래그먼트 매니저 참조*/
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentLivingRoom).commit();
-
+        /*상현 2021-04-21 위젯 탭 연결 후 탭추가 */
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.addTab(tabs.newTab().setText("거실"));
         tabs.addTab(tabs.newTab().setText("부엌"));
         tabs.addTab(tabs.newTab().setText("방"));
 
-
+        /*상현 2021-04-21 탭을 선택 시 발생할 이벤트*/
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -73,7 +73,7 @@ public class homePlusMain extends AppCompatActivity {
         });
 
     }
-
+    /*상현 2021-04-21 옵션메뉴 생성 메뉴 인플레이트*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
