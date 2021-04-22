@@ -56,14 +56,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     // [START on_start_check_user]
-    @Override
+   /* @Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
             reload();
+        }else{
+            Toast.makeText(getApplicationContext(),"현재 접속중이 아닙니다.",Toast.LENGTH_LONG).show();
         }
     }
     private void reload() { }
+
+    private void updateUI(FirebaseUser user) {
+
+    }*/
 }
