@@ -9,12 +9,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity {
     /*상현 2021-04-18 회원가입 요청코드*/
     public static final int REQUEST_CODE_JOINMEBER = 101;
     /*상현 2021-04-18 로그인 요청코드*/
     public static final int REQUEST_CODE_HOMEPLUS = 102;
     Button btnJoinMember, btnHomePlus;
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,4 +55,15 @@ public class MainActivity extends AppCompatActivity {
         }
         }
     }
+    // [START on_start_check_user]
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            reload();
+        }
+    }
+    private void reload() { }
 }
