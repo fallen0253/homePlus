@@ -30,6 +30,7 @@ android {
 }
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
+
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -41,8 +42,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     compile 'com.google.firebase:firebase-auth:9.6.1'
+
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
     // Import the Firebase BoM
-    implementation platform('com.google.firebase:firebase-bom:26.8.0')
+    implementation platform('com.google.firebase:firebase-bom:27.1.0')
     // Declare the dependency for the Firebase SDK for Google Analytics
     implementation 'com.google.firebase:firebase-analytics'
     // Declare the dependencies for any other desired Firebase products

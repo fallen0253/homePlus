@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/backRed"
-        android:title="배경색(빨강)"/>
-    <item android:id="@+id/backGreen"
-        android:title="배경색(초록)"/>
-    <item android:id="@+id/backBlue"
-        android:title="배경색(파랑)"/>
-    <item android:id="@+id/backBase"
-        android:title="배경색(기본)"/>
+    <item android:id="@+id/logOut"
+        android:title="로그아웃"/>
+    <item android:id="@+id/deleteMember"
+        android:title="회원탈퇴"/>
 </menu>
