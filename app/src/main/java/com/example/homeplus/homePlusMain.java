@@ -190,7 +190,7 @@ public class homePlusMain extends AppCompatActivity {
     }
     /*리나 2021-04-24 토스트메세지*/
     void showToast(String msg) {
-        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+        Toast.makeText(homePlusMain.this, msg, Toast.LENGTH_SHORT).show();
     }
 
     //스마트폰의 블루투스 지원 여부 검사
@@ -314,7 +314,7 @@ public class homePlusMain extends AppCompatActivity {
     }
 
     //데이터 송신(아두이노로 전송)
-    private void sendDate(String msg) {
+    public void sendData(String msg) {
         msg+=strDelimiter;
         try{
             outputStream.write(msg.getBytes()); //문자열 전송

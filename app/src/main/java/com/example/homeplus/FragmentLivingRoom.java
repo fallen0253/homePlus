@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.os.VibrationAttributes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +14,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class FragmentLivingRoom extends Fragment {
-
+    ImageView ivLight;
+    String str;
+    homePlusMain hpm=new homePlusMain();
     public FragmentLivingRoom() {
 
     }
@@ -24,6 +28,7 @@ public class FragmentLivingRoom extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
     }
     /* 상현 2021-04-21 거실 */
@@ -41,7 +46,16 @@ public class FragmentLivingRoom extends Fragment {
         cbUserInput = fraglivingroom.findViewById(R.id.cbUserInput);
         EditText edtInput = fraglivingroom.findViewById(R.id.edtInput);
         ImageView ivShutDown = fraglivingroom.findViewById(R.id.ivShutDown);
+        ivLight=fraglivingroom.findViewById(R.id.ivLight);
 
+        ivLight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), str, Toast.LENGTH_SHORT).show();
+                str="11";
+                hpm.sendData(str);
+            }
+        });
 
         return fraglivingroom;
 

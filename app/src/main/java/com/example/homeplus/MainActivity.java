@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnJoinMember, btnHomePlus;
     FirebaseAuth mAuth;
     EditText edtUserName, edtPassWord;
-    TextView tvFindPW;
+    TextView tvFindPW, tvLoginErrorMsg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         edtUserName=findViewById(R.id.edtUserName);
         edtPassWord=findViewById(R.id.edtPassWord);
         tvFindPW=findViewById(R.id.tvFindPW);
+        /*리나 2021-04-26 아이디와 비밀번호 오류 시 메세지 출력*/
+        tvLoginErrorMsg=findViewById(R.id.tvLoginErrorMsg);
+        tvLoginErrorMsg.setVisibility(View.GONE);
 
         mAuth = FirebaseAuth.getInstance();
         /*리나 2021-04-24 로그인 상태 확인*/
@@ -112,10 +115,8 @@ public class MainActivity extends AppCompatActivity {
                                 Intent intent = new Intent(getApplicationContext(),homePlusMain.class);
                                 startActivityForResult(intent,REQUEST_CODE_HOMEPLUS);
                             } else {
-                                // If sign in fails, display a message to the user.
-                                Toast.makeText(MainActivity.this, "Authentication failed.",
-                                        Toast.LENGTH_SHORT).show();
-
+                                /*리나 2021-04-26 아이디와 비밀번호 오류 시 메세지 출력*/
+                                tvLoginErrorMsg.setVisibility(View.VISIBLE);
                             }
                         }
                     });
