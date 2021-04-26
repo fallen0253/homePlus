@@ -23,6 +23,7 @@
             android:textStyle="bold"
             />
         <Switch
+            android:id="@+id/swLED"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:switchMinWidth="56dp"
@@ -31,27 +32,32 @@
     </LinearLayout>
     
         <TextView
+            android:id="@+id/tvContent"
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginBottom="20dp" />
 
     <CheckBox
+        android:id="@+id/cbDate"
         android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="날짜 정보"/>
     <CheckBox
+        android:id="@+id/cbWeather"
         android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="날씨 정보"/>
     <CheckBox
+        android:id="@+id/cbDust"
         android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="미세먼지 정보"/>
     <CheckBox
+        android:id="@+id/cbUserInput"
         android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -64,6 +70,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText
+            android:id="@+id/edtInput"
             android:layout_margin="15dp"
             android:gravity="center"
             android:width="200dp"
@@ -74,6 +81,7 @@
             android:layout_height="wrap_content"
             android:hint="메세지를 입력해주세요"/>
         <ImageView
+            android:id="@+id/ivShutDown"
             android:src="@drawable/shutdown1"
             android:layout_width="wrap_content"
             android:layout_height="100dp"/>

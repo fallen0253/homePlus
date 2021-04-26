@@ -7,6 +7,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.Checkable;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Switch;
+import android.widget.TextView;
 
 
 public class FragmentLivingRoom extends Fragment {
@@ -24,7 +30,20 @@ public class FragmentLivingRoom extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        /*상현 2021-04-26 XML 자바 연동*/
+        CheckBox cbDate,cbWeather,cbDust,cbUserInput;
+        View fraglivingroom = inflater.inflate(R.layout.fragment_living_room,container,false);
+        Switch swLED = fraglivingroom.findViewById(R.id.swLED);
+        TextView tvContent = fraglivingroom.findViewById(R.id.tvContent);
+        cbDate = fraglivingroom.findViewById(R.id.cbDate);
+        cbWeather = fraglivingroom.findViewById(R.id.cbWeather);
+        cbDust = fraglivingroom.findViewById(R.id.cbDust);
+        cbUserInput = fraglivingroom.findViewById(R.id.cbUserInput);
+        EditText edtInput = fraglivingroom.findViewById(R.id.edtInput);
+        ImageView ivShutDown = fraglivingroom.findViewById(R.id.ivShutDown);
 
-        return inflater.inflate(R.layout.fragment_living_room, container, false);
+
+        return fraglivingroom;
+
     }
 }
