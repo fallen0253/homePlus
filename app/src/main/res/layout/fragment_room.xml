@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp">
         <TextView
-            android:id="@+id/text1"
+            android:id="@+id/tvRED"
             android:layout_marginLeft="40dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -28,6 +28,7 @@
             android:clickable="true"
             android:textStyle="bold"/>
         <ProgressBar
+            android:id="@+id/pbRED"
             android:layout_marginLeft="20dp"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
@@ -41,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp">
         <TextView
+            android:id="@+id/tvGREEN"
             android:layout_marginLeft="40dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -48,6 +50,7 @@
             android:layout_weight="1"
             android:textStyle="bold"/>
         <ProgressBar
+            android:id="@+id/pbGREEN"
             android:layout_marginLeft="20dp"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
@@ -61,6 +64,7 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="20dp">
     <TextView
+        android:id="@+id/tvBLUE"
         android:layout_marginLeft="40dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -68,6 +72,7 @@
         android:layout_weight="1"
         android:textStyle="bold"/>
     <ProgressBar
+        android:id="@+id/pbBLUE"
         android:layout_marginLeft="20dp"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
