@@ -46,6 +46,7 @@ public class homePlusMain extends AppCompatActivity {
     FragmentKitchen fragmentKitchen;
     FragmentRoom fragmentRoom;
     FirebaseAuth mAuth;
+    Toolbar toolbar;
 
     ImageView ivConnect;
 
@@ -67,7 +68,8 @@ public class homePlusMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_plus_main);
-
+        toolbar=findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         /*리나 2021-04-24 블루투스 연결 상태 확인*/
         ivConnect=findViewById(R.id.ivConnect);
         ivConnect.setOnClickListener(new View.OnClickListener() {
@@ -91,12 +93,8 @@ public class homePlusMain extends AppCompatActivity {
         //textViewUserEmail의 내용을 변경해 준다.
         showToast(user.getEmail()+"으로 로그인 성공");
 
-        /*상현 2021-04-18 액션바 선언*/
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayShowTitleEnabled(true);
-        actionBar.show();
-        actionBar.setTitle("Home Plus");
-        /*상현 2021-04-18 프래그먼트 객체 생성 선언*/
+       /* 상현 2021-04-18 프래그먼트 객체 생성 선언
+        */
         fragmentLivingRoom = new FragmentLivingRoom();
         fragmentKitchen = new FragmentKitchen();
         fragmentRoom = new FragmentRoom();

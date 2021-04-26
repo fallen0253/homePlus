@@ -130,26 +130,7 @@ public class MainActivity extends AppCompatActivity {
     /* 리나 2021-04-24 주석처리
     이 부분은 삭제하고 위에 onCreate에 처음부터 시작하도록 했어요.
     그래야지 로그인 상태에서 또 로그인페이지로 안 넘어가도록!
- 
-    // [START on_start_check_user]
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
-            reload();
-        }else{
-            Toast.makeText(getApplicationContext(),"현재 접속중이 아닙니다.",Toast.LENGTH_LONG).show();
-        }
-    }*/
-    /* 리나 2021-04-24 주석처리
-    이 부분은 어떤 용도로 사용되는지 설명 부탁드립니다.
-    private void reload() { }
 
-    private void updateUI(FirebaseUser user) {
-
-    }
     */
 
 }
