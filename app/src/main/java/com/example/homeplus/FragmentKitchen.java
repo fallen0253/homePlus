@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 
 public class FragmentKitchen extends Fragment {
@@ -25,7 +26,9 @@ public class FragmentKitchen extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View fragKitchen = inflater.inflate(R.layout.fragment_kitchen,container,false);
+        ImageView ivSecurity = fragKitchen.findViewById(R.id.ivSecurity);
 
-        return inflater.inflate(R.layout.fragment_kitchen, container, false);
+        return fragKitchen;
     }
 }
